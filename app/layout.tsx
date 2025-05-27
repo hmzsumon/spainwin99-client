@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-	title: 'Next.js App Router',
-	description: 'A Next.js app router example',
+	title: 'SpainWin99',
+	description: 'Your Ultimate Online Gaming Destination',
 };
 
 export default function RootLayout({
