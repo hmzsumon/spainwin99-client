@@ -52,12 +52,12 @@ const NavBar = () => {
 				{/* End Logo */}
 
 				<div className={` ${beaufortLol.className} flex gap-2`}>
-					<Link href='#' onClick={handleClick}>
+					<Link href='/login'>
 						<button className='button button--secondary w-20 h-9'>
 							<span className='uppercase text-sm'>Log in</span>
 						</button>
 					</Link>
-					<Link href='#' onClick={handleClick}>
+					<Link href='/register'>
 						<button className='button button--secondary w-24 h-9'>
 							<span className='uppercase text-sm'>Register</span>
 						</button>
