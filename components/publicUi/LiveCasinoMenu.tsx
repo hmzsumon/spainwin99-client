@@ -11,6 +11,7 @@ import Img7 from '@/public/images/live-casino/live_casino_7.png';
 import CasinoIcon from '@/public/images/icons/live-casino.svg';
 
 import CornerFrame from '../cornerFrame/CornerFrame';
+import Link from 'next/link';
 
 const liveCasinoItems = [
 	{ image: Img1, text: 'Top Live' },
@@ -46,14 +47,16 @@ const LiveCasinoMenu = () => {
 		<div className='px-4 space-y-4 mt-4'>
 			<SectionTitle icon={CasinoIcon.src} title='Live Casino' />
 			<div className='overflow-x-auto scrollbar-hide h-60'>
-				<div className='flex gap-4 w-max' onClick={handleClick}>
+				<div className='flex gap-4 w-max'>
 					{liveCasinoItems.map((item, index) => (
-						<CornerFrame
-							key={index}
-							image1={CasinoBg.src}
-							image2={item.image.src}
-							text={item.text}
-						/>
+						<Link key={index} href='/casino' className='cursor-pointer'>
+							<CornerFrame
+								key={index}
+								image1={CasinoBg.src}
+								image2={item.image.src}
+								text={item.text}
+							/>
+						</Link>
 					))}
 				</div>
 			</div>
