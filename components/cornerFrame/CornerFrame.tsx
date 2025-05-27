@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import './cornerFrame.css';
+import './CornerFrame.css';
 
 type CornerFrameProps = {
 	image1: string;
