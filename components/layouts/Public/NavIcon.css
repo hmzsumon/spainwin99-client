@@ -1,0 +1,25 @@
+:root {
+	--stb-nav-link-icon-bg: url('/icons/star-bg.png');
+	--stb-nav-link-icon-path: url('/icons/star-mask.svg');
+	--stb-black-1000: 0, 0, 0;
+	--stb-transition-time: 0.3s;
+	--stb-nav-link-icon-transform: scale(1);
+}
+
+.nav-list__wrap {
+	z-index: 2;
+}
+
+.nav-list__mask {
+	width: 20px;
+	height: 20px;
+	backface-visibility: hidden;
+	background-image: var(--stb-nav-link-icon-bg);
+	mask-image: var(--stb-nav-link-icon-path);
+	mask-size: cover;
+	mask-repeat: no-repeat;
+	background-size: cover;
+	filter: drop-shadow(0 2px 6px rgb(var(--stb-black-1000) / 0.3));
+	transform: var(--stb-nav-link-icon-transform);
+	transition: transform var(--stb-transition-time);
+}
