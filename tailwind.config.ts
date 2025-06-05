@@ -22,6 +22,7 @@ const config: Config = {
 				'htx-blue': '#0173e5',
 				'stb-green': 'rgb(0, 51, 42)',
 				'stb-border': 'rgb(173 126 55)',
+				'border-green': 'rgb(0 73 59 / 0)',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
