@@ -5,6 +5,7 @@ import InputWithLabelError from '../InputWithLabelError';
 import InputPassword from '../InputPassword';
 import PromoCheckbox from '../PromoCheckbox';
 import TermsCheckbox from '../TermsCheckbox';
+import Link from 'next/link';
 
 const LoginPage = () => {
 	const [formData, setFormData] = useState({
@@ -92,7 +93,7 @@ const LoginPage = () => {
 					</div>
 
 					<div className='dialog-action'>
-						<div className='button--center'>
+						<Link href='/login-2' className='button--center'>
 							<button
 								className='dialog-action-button button button--primary button--s'
 								type='button'
@@ -100,7 +101,7 @@ const LoginPage = () => {
 							>
 								<span className='button__title'>Login</span>
 							</button>
-						</div>
+						</Link>
 					</div>
 				</div>
 			</div>

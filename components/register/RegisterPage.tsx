@@ -1,10 +1,12 @@
 'use client';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import './Register.css';
 import InputWithLabelError from '../InputWithLabelError';
 import InputPassword from '../InputPassword';
 import PromoCheckbox from '../PromoCheckbox';
 import TermsCheckbox from '../TermsCheckbox';
+import Link from 'next/link';
 
 const RegisterPage = () => {
 	const [receivePromo, setReceivePromo] = useState(true);
@@ -47,9 +49,12 @@ const RegisterPage = () => {
 	};
 
 	const handleSubmit = () => {
+		toast.error('Please fill in all required fields');
+
 		if (!validate()) return;
 		console.log('✅ Submitted Data:', formData);
-		// Submit logic here...
+		// // Submit logic here..
+		return;
 	};
 
 	return (
@@ -153,15 +158,14 @@ const RegisterPage = () => {
 					</div>
 
 					<div className='dialog-action'>
-						<div className='button--center'>
+						<Link href='/register-next' className='button--center'>
 							<button
 								className='dialog-action-button button button--primary button--s'
 								type='button'
-								onClick={handleSubmit}
 							>
 								<span className='button__title'>Register</span>
 							</button>
-						</div>
+						</Link>
 					</div>
 				</div>
 			</div>
